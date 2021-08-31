@@ -29,7 +29,7 @@ and open the template in the editor.
         $barva = array('Černá', 'Stříbrná', 'Modrá');
         
         $hodinky = array();
-        for ($i = 0; $i < 10; $i++)
+        for ($i = 0; $i < 30; $i++)
         {
             $hodinky[$i] = new Produkt($modely[rand(0, count($modely)-1)] . $i, $vyrobci[rand(0, count($vyrobci)-1)], $ceny[rand(0, count($ceny)-1)].' Kč');
             $hodinky[$i]->PridejVlastnost('Záruka', $zaruky[rand(0, count($zaruky)-1)]);
@@ -45,7 +45,7 @@ and open the template in the editor.
         $filtrBarva = new Vlastnost('Barva', 'Modrá');
         $filtrCifernik = new Vlastnost('Ciferník', 'Analogový');
         
-        $poleFiltru = array($filtrZaruka);//, $filtrCifernik);//,$filtrBarva );
+        $poleFiltru = array($filtrZaruka, $filtrCifernik);//,$filtrBarva );
         
         foreach ($hodinky as $value) {
             //echo "Y = $y <br />";
